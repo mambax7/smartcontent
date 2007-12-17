@@ -1,0 +1,13 @@
+<{$block.css}>
+<{foreach item=page from=$block.pages}>
+	<div id="smartcontent_page">
+		<h2><{$page.title}></h2>
+		<div id="smartcontent_page_body">
+			<{if $block.isAdmin}>
+				<{$page.editItemLink}><{$page.deleteItemLink}>
+			<{/if}>
+			<{$page.body}>
+		</div>
+		<div id="smartcontent_page_print_and_mail"><{$page.printAndMailLink}></div>
+	</div>
+<{/foreach}>

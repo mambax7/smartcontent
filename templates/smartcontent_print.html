@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$printtitle}></title>
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/modules/smartcontent/print.css" />
+</head>
+
+<{if !$doNotStartPrint}>
+<script for=window event=onload language="javascript">
+  if (navigator.appVersion.indexOf("Mac",0)>0) {
+   }
+ else {
+
+  if (window.print)
+    setTimeout('window.print()',1000);
+    }
+</script>
+<{/if}>
+
+<body class="body">
+
+	<div id="pagelayer">
+	  <div id="header"><img src="<{$printlogourl}>" alt=""/></div><br/><br/><br/>
+	 <!--  <div id="title"><{$page.title}></div> -->
+	  <{if $display_whowhen_link}>
+	     <div id="whoandwhen"><{$lang_author_date}></div>
+	  <{/if}>
+
+	  <div id="body"><{$page.body}></div>
+
+	  <{if $printfooter}>
+	  	<div id="footer"><{$printfooter}></div>
+	  <{/if}>
+<{if $smartPopup}>
+	<div style="text-align: center"><a href="javascript:window.close();"><{$smarty.const._MD_SCONTENT_PRINT_CLOSE}></a></div>
+<{/if}>
+
+	</div>
+
+</body>
+
+</html>

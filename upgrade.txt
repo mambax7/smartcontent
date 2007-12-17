@@ -1,0 +1,28 @@
+/**
+* $Id: upgrade.txt,v 1.1 2007/06/05 18:27:38 marcan Exp $
+* Module: SmartContent
+* Author: The SmartFactory <www.smartfactory.ca>
+* Licence: GNU
+*/
+
+How to uprade from SmartContent 1.0 Beta
+========================================
+
+In order to upgrade the module, you will need to :
+
+- Upload the complete /smartcontent folder into the /modules directory of your website
+
+- Then, log in to your site as administrator, go to System Admin > Modules, look for the Smartcontent icon in the list of installed modules and click in the update icon
+
+- Click on 'Check Tables' from the SmartContent top menu
+
+That's it !
+
+Enjoy !
+
+
+
+.:: The SmartFactory ::.
+.:: Open Source : smartfactory.ca ::.
+.:: Professionnal : inboxsolutions.net ::.
+.:: support@smartfactory.ca ::

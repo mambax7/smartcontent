@@ -1,0 +1,3 @@
+RewriteEngine   On
+RewriteRule     ^pages/ http://www.yoursite.com/modules/smartcontent/
+RewriteRule     ^pages\.([a-z]+)\.([0-9.]+)/  http://www.yoursite.com/modules/smartcontent/seo.php?seoOp=$1&seoArg=$2

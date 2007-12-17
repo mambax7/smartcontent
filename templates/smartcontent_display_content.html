@@ -1,0 +1,85 @@
+<{include file='db:smartcontent_header.html'}>
+
+<{if $index_page}>
+	<div class="item">
+		<!-- Start categories loop -->
+		<{foreach item=category from=$categories}>
+			<div class="smartcontent_category_index_list">
+				<div class="smartcontent_categoryname">
+					<{if $isAdmin}>
+						<{$category.self.editItemLink}><{$category.self.deleteItemLink}>
+					<{/if}>
+					<{$category.self.itemLink}>
+				</div>
+				<div>
+					<{if $category.self.image}>
+						<img class="smartcontent_category_image" src="<{$category.self.image}>" alt="<{$category.self.name}>" width="<{$category_list_image_width}>"/>
+					<{/if}>
+					<{$category.self.description}>
+				</div>
+				<{if $category.sub}>
+					<div class="smartcontent_subcats">
+						<div class="smartcontent_subcats_info"><{$smarty.const._MD_SCONTENT_SUBCATEGORIES}></div>
+				  		<{foreach name=loop item=subcat from=$category.sub}>
+				  			<{$subcat.self.itemLink}><{if $smarty.foreach.loop.iteration < $category.subcatscount}> -<{/if}>
+				  		<{/foreach}>
+				  	</div>
+			  	<{/if}>
+			</div>
+			<div class="smartcontent_clear_border"></div>
+		<{/foreach}>
+		<!-- End categories loop -->
+	</div>
+<{else}>
+	<div>
+		<!-- Start categories loop -->
+		<{foreach item=category from=$categories}>
+			<div class="smartcontent_category_index_list">
+				<div class="smartcontent_categoryname">
+					<{if $isAdmin}>
+						<{$category.self.editItemLink}><{$category.self.deleteItemLink}>
+					<{/if}>
+					<{$category.self.name}>
+				</div>
+				<div>
+					<{if $category.self.image}>
+						<img class="smartcontent_category_image" src="<{$category.self.image}>" alt="<{$category.self.name}>" width="<{$category_list_image_width}>"/>
+					<{/if}>
+					<{$category.self.description}>
+				</div>
+				<div class="smartcontent_category_header">
+					<{$category.self.header}>
+				</div>
+				<div></div>
+				<{if $category.sub}>
+					<div class="smartcontent_subcats">
+						<div class="smartcontent_subcats_info"><{$smarty.const._MD_SCONTENT_SUBCATEGORIES}></div>
+				  		<{foreach name=loop item=subcat from=$category.sub}>
+				  			<{$subcat.self.itemLink}><{if $smarty.foreach.loop.iteration < $category.subcatscount}> -<{/if}>
+				  		<{/foreach}>
+				  	</div>
+			  	<{/if}>
+			</div>
+			<div class="smartcontent_clear"></div>
+		<{/foreach}>
+		<!-- End categories loop -->
+	</div>
+<{/if}>
+
+
+<div class="smartcontent_items_list">
+	<{if $items}>
+
+		<div class="smartcontent_pages_navbar"><{$pagenav}></div>
+
+		<div class="item">
+			<{foreach item=item from=$items}>
+				<div class="smartcontent_items_list_item"><{$item.itemLink}></div>
+			<{/foreach}>
+		</div>
+
+		<div class="smartcontent_pages_navbar"><{$pagenav}></div>
+	<{/if}>
+</div>
+
+<{include file='db:smartcontent_footer.html'}>

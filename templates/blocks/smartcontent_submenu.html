@@ -1,0 +1,17 @@
+
+	<ul>
+	<{foreach item=menuitem from=$block name=loop}>
+		
+			<li>
+			<{if $menuitem.selected}>
+				<span id="smartcontent_menuitem_selected"><{$menuitem.caption}></span>
+			<{else}>
+				<a href="<{$menuitem.link}>"><{$menuitem.caption}></a>
+			<{/if}>
+			<{if $menuitem.subs}>
+				<{include file='db:smartcontent_navigation.html' block=$menuitem.subs}>
+			<{/if}>
+			</li>
+		
+	<{/foreach}>
+	</ul>		

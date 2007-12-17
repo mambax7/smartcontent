@@ -1,0 +1,16 @@
+<table id="smartcontent_submenus">
+	<tr>
+		<td class="top_page_submenu_column">
+			<{foreach item=submenu from=$smartcontent_submenus name=loop}>
+				<div class="top_page_submenu" <{if $submenu.selected}> id="top_page_submenu_selected"<{/if}> >
+					<a href="<{$submenu.link}>"><{$submenu.caption}></a>
+				</div>
+				<{if ($smarty.foreach.loop.index == $smartcontent_submenus_biggerhalf_minus1) && !$smarty.foreach.loop.last}>
+					</td>
+					<td>&nbsp;</td>
+					<td class="top_page_submenu_column">
+				<{/if}>
+			<{/foreach}>		
+		</td>
+	</tr>
+</table>

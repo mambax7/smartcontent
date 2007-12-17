@@ -1,0 +1,24 @@
+<{include file='db:smartcontent_header.html'}>
+
+<div id="smartcontent_page">
+	<{if $page.title || $isAdmin}>
+		<h2>
+			<{if $isAdmin}>
+				<{$page.editItemLink}><{$page.deleteItemLink}>
+			<{/if}>
+			<{if $page.title}>
+				<{$page.title}>
+			<{/if}>
+		</h2>
+	<{/if}>
+	<div id="smartcontent_page_body">
+		<{$page.body}>
+		<br/>
+		<span id="smartcontent_previous"><{$page.previous}></span>
+		<span id="smartcontent_next"><{$page.next}></span>
+		
+	<div id="smartcontent_page_print_and_mail" style="backgroud-color:#EFF4F7;"><{$page.printAndMailLink}></div>
+	</div>
+</div>
+
+<{include file='db:smartcontent_footer.html'}>

@@ -1,0 +1,241 @@
+/**
+* $Id: module.css,v 1.5 2007/10/23 18:48:28 felix Exp $
+* Module: SmartFAQ
+* Author: marcan <marcan@notrevie.ca>
+* Licence: GNU
+*/
+.smartcontent_headertable {
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid;
+	margin-bottom: 10px;
+}
+
+.smartcontent_modulename {
+	font-size: 90%;
+	text-align: left;
+	font-weight: bold;
+	padding-right: 0.3em;
+	line-height: 18px;
+}
+
+.smartcontent_breadcrumb {
+	font-size: 90%;
+	line-height: 18px;
+}
+
+.smartcontent_adminlinks {
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-size: 90%;
+	text-align: center;
+	line-height: 18px;
+}
+
+#smartcontent_page_title {
+	font-size: 120%;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+#smartcontent_page_body {
+
+}
+
+#smartcontent_page_print_and_mail {
+	padding-top: 5px;
+}
+
+.smartcontent_infotitle {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 250%;
+	line-height: 250%;
+	font-weight: bold;
+	display: block;
+}
+
+.smartcontent_infotext {
+	margin-bottom: 8px;
+	line-height: 130%;
+	display: block;
+}
+
+.smartcontent_category_index_list {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	clear: both;
+}
+
+.smartcontent_clear_border {
+	clear: both;
+	border-bottom: 1px solid;
+	padding-top: 5px;
+}
+
+.smartcontent_clear {
+	clear: both;
+	padding-top: 5px;
+}
+
+.smartcontent_categoryname {
+	padding-bottom: 5px;
+	vertical-align: middle;
+	font-size: 120%;
+	text-align: left;
+	font-weight: bold;
+	margin: 0;
+	line-height: 120%;
+}
+
+.smartcontent_category_image {
+	float: left;
+	padding-right: 5px;
+	display: block;
+}
+
+.smartcontent_category_header {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+.smartcontent_subcats {
+	padding-top: 5px;
+	font-size: 90%;
+}
+
+.smartcontent_subcats_info {
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+.smartcontent_collaps_title {
+	margin-bottom: 2px;
+	margin-top: 5px;
+	font-size: 130%;
+	line-height: 130%;
+	font-weight: bold;
+	display: block;
+}
+
+.smartcontent_collaps_info {
+	margin: 3px 0 12px 0;
+	display: block;
+}
+
+.smartcontent_item_head_cat {
+	padding-top: 0px;
+	text-align: right;
+	font-style: normal;
+	vertical-align: middle;
+	display: block;
+}
+
+.smartcontent_item_head_who {
+	padding-top: 5px;
+	text-align: right;
+	font-style: normal;
+	vertical-align: middle;
+	display: block;
+}
+
+.smartcontent_item_image {
+	display: block;
+	padding: 5px;
+}
+
+.smartcontent_items_link {
+	width: 50%;
+	vertical-align: middle;
+}
+
+.smartcontent_items_list {
+	padding-top: 10px;
+}
+
+.smartcontent_items_list_item {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.smartcontent_list {
+	padding: 8px;
+	font-size: 110%;
+}
+
+.smartcontent_category_dsc {
+	margin: 3px 0 10px 0;
+	font-size: small;
+	display: block;
+}
+
+.smartcontent_indexfooter {
+	font-size: 90%;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+
+.smartcontent_itemfooter {
+	font-size: 90%;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+
+.itemFoot {
+	text-align: right;
+	padding: 3px;
+	border: 1px solid #808080;
+}
+
+.itemFoot {
+	text-align: right;
+	padding: 3px;
+	border: 1px solid #808080;
+}
+
+.pre_itemInfo {
+	padding-top: 5px;
+}
+
+.modfooter {
+	text-align: center;
+	padding-top: 6px;
+	font-size: 88%;
+	border-top: 0px solid #ccc;
+}
+
+.spotlight_readmore {
+	font-size: 88%;
+	text-align: right;
+	border-bottom: 1px solid #000000;
+}
+
+.smartcontent_pagenav_top {
+	padding-top: 5px;
+	font-size: 90%;
+	text-align: left;
+}
+
+.smartcontent_pagenav_bottom {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 90%;
+	text-align: center;
+}
+
+.smartcontent_pages_navbar {
+	text-align: center;
+	padding: 10px;
+}
+#smartcontent_menuitem_selected {
+}
+
+#smartcontent_previous {
+	padding-top: 20px;
+}
+
+#smartcontent_next {
+	padding-top: 20px;
+}
