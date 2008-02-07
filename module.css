@@ -230,6 +230,8 @@
 	padding: 10px;
 }
 #smartcontent_menuitem_selected {
+	font-weight: bold;
+	font-size: 120%;
 }
 
 #smartcontent_previous {

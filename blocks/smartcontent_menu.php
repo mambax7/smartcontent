@@ -61,25 +61,44 @@ function smartcontent_menu_show ($options)
 	} else {
 
 		// we are not in SmartContent. Let's check if the current url matches any external_link of SmartContent
-		$url = strrev(str_replace($xoops_urls['querystring'], '', $xoops_urls['full']));
-		 if(substr($url, 0, 4) == 'php.'){
-		 	$url = substr($url, 4, strlen($url)-1);
-		 	while(substr($url, 0, 1) != '/'){
-		 		$url = substr($url, 1, strlen($url)-1);
-		 	}
-		 	if(substr($url, 0, 1) == '/'){
-		 		$url = substr($url, 1, strlen($url)-1);
-		 	}
-		 }
-	  	$url = strrev($url);
-		if($url != XOOPS_URL){
-			$url = str_replace(XOOPS_URL, '', $url);
-		}
+		if($url != ''){
+			if($url != XOOPS_URL){
+				$url = str_replace(XOOPS_URL, '', $url);
+				//hack for ampersand designs
+				$url = str_replace('http://ssl3.glhserver.com/~admin17/index.php', '', $url);
+				$url = str_replace('http://ssl3.glhserver.com/~admin17/', '', $url);
+			}
+			if($url != ''){
+				$criteria->add(new Criteria('external_link', '%'.$url.'%', 'LIKE'));
+				$linkObj = $smartcontent_page_handler->getObjects($criteria);
+			}
+			if ($linkObj && count($linkObj) != 0) {
+				$smartcontent_pageObj = $linkObj[0];
+			}else {
+				// try to match to a module url
+				$url = strrev(str_replace($xoops_urls['querystring'], '', $xoops_urls['full']));
+				 if(substr($url, 0, 4) == 'php.'){
+				 	$url = substr($url, 4, strlen($url)-1);
+				 	while(substr($url, 0, 1) != '/'){
+				 		$url = substr($url, 1, strlen($url)-1);
+				 	}
+				 	if(substr($url, 0, 1) == '/'){
+				 		$url = substr($url, 1, strlen($url)-1);
+				 	}
+				 }
+			  	$url = strrev($url);
+				if($url != XOOPS_URL){
+					$url = str_replace(XOOPS_URL, '', $url);
+				}
+				if($url != ''){
+					$criteria->add(new Criteria('external_link', '%'.$url.'%', 'LIKE'));
 
-		$criteria->add(new Criteria('external_link', '%'.$url.'%', 'LIKE'));
-		$linkObj = $smartcontent_page_handler->getObjects($criteria);
-		if ($linkObj && count($linkObj) != 0) {
-			$smartcontent_pageObj = $linkObj[0];
+					$linkObj = $smartcontent_page_handler->getObjects($criteria);
+					if ($linkObj && count($linkObj) != 0) {
+						$smartcontent_pageObj = $linkObj[0];
+					}
+				}
+			}
 		}
 	}
 	//Retreive parent ids for wich submenu must be shown
