@@ -18,6 +18,8 @@ if ($xoopsModuleConfig['home_url'] != '' &&
 	(!strpos($xoopsModuleConfig['home_url'], 'index.php')) &&
 	$xoopsModuleConfig['home_url'] != SMARTCONTENT_URL &&
 	$xoopsModuleConfig['home_url'] != XOOPS_URL . "/modules/smartcontent"
+	&&
+	$xoopsModuleConfig['home_url'] != XOOPS_URL . "/modules/smartcontent/"
 	) {
 		header('Location: ' . $xoopsModuleConfig['home_url']);
 		exit;

@@ -175,7 +175,7 @@ $modversion['config'][$i]['title'] = '_MI_SCONTENT_HOME';
 $modversion['config'][$i]['description'] = '_MI_SCONTENT_HOMEDSC';
 $modversion['config'][$i]['formtype'] = 'textbox';
 $modversion['config'][$i]['valuetype'] = 'text';
-$modversion['config'][$i]['default'] = XOOPS_URL . '/modules/smartcontent/';
+$modversion['config'][$i]['default'] = '';
 $i++;
 
 $modversion['config'][$i]['name'] = 'display_cat_in_breadcrumb';
