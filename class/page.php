@@ -73,11 +73,7 @@ class SmartcontentPage extends SmartSeoObject {
         									'module' => 'smartcontent',
         									'method' => 'getPageTree'));
 
-        $this->setControl('body', array('name' => 'textarea',
-                                        'itemHandler' => false,
-                                        'method' => false,
-                                        'module' => false,
-                                        'form_editor' => 'default'));
+        $this->setControl('body','dhtmltextarea');
         $this->setControl('submenu', 'yesno');
         $this->setControl('uid', array('name' => 'user'));
         $this->setControl('datesub', array('name' => 'date_time'));
